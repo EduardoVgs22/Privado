@@ -7,6 +7,7 @@ const pool = mysql.createPool({
   user: config.user,
   password: config.password,
   connectionLimit: 10 // Puedes ajustar este valor según las necesidades de tu aplicación
+   timeout: 60000, // Ajusta el tiempo de espera en milisegundos
 });
 
 function getConnection() {
